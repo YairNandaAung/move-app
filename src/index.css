@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+}
+ul.navbar-nav{
+    margin-left: 320px;
+}
+
+img.card-img {
+    border-radius: 20px;
+}
+.movie_title{
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+.movie_caption{
+    color: #e0e0e0;
+    font-size: 13px;
+    margin-left: 8px;
+}
+.carousel-image {
+    max-height: 700px;
+}
+/* .movie_detail_bg{
+    background-image:url("../images/avenger2.jpg");
+    height: 600px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+} */
+.movie-detail-card {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 130px;
+}
+.img-radius{
+    border-radius: 10px;
+}
+.movie_tag{
+    font-size: 15px;
+    color: #e0e0e0;
+}
+.movie_span{
+       color: #e0e0e0;
+    font-size: 15px;
+    margin-left: 8px;
+}
+.mv-button{
+    border: 1px solid white;
+    color: black;
+    padding: 10px 19px 10px 19px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.active-star{
+    color: rgb(241, 206, 5);
+}
+.bg-opacity{
+    background-color:black;
+    height: 600px;
+    width: 100%;
+    opacity: 0.3;
+}
