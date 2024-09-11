@@ -4,10 +4,6 @@ body{
 ul.navbar-nav{
     margin-left: 320px;
 }
-
-img.card-img {
-    border-radius: 20px;
-}
 .movie_title{
     color: white;
     font-size: 16px;
@@ -18,7 +14,6 @@ img.card-img {
 .movie_caption{
     color: #e0e0e0;
     font-size: 13px;
-    margin-left: 8px;
 }
 .carousel-image {
     max-height: 700px;
