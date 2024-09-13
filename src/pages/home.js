@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import MovieList from "../components/MovieList";
+import Slider from "../components/Slider";
 
 function Home() {
 
     let [nowPlayData, setNowPlayData] = useState([]);
     let [popularMovies, setPopularMovies] = useState([]);
+    let [loading, setLoading] = useState(true)
 
     useEffect(() => {
       fetchNowPlayData();
@@ -27,8 +30,10 @@ function Home() {
             }
             const data = await response.json();
             setNowPlayData(data.results)
+            setLoading(false)
         } catch (error) {
             console.log(error)
+            setLoading(false)
         }
     }
 
@@ -40,72 +45,25 @@ function Home() {
             }
             const data = await response.json();
             setPopularMovies(data.results)
+            setLoading(false)
         } catch (error) {
             console.log(error)
+            setLoading(false)
         }
     }
-
-
     return (
       <>
-        <div id="carouselExampleCaptions" className="carousel slide">
-          <div className="carousel-inner">
-            {nowPlayData.map((nowplaymovie) => (
-              <div className="carousel-item active" key={nowplaymovie.id}>
-                <img
-                  src={`https://image.tmdb.org/t/p/original/${nowplaymovie.poster_path}`}
-                  className="d-block w-100 carousel-image"
-                />
-              </div>
-            ))}
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-
-        <div className="container my-5">
-          <h3 className="text-white my-5">Popular Movies</h3>
-          <div className="row">
-            {popularMovies.map((popularmovie) => (
-              <div className="col-md-2 mb-5">
-                <div className="movie-card">
-                  <img
-                    className="img-fluid"
-                    src={`https://image.tmdb.org/t/p/original/${popularmovie.poster_path}`}
-                  />
-                  <p className="movie_title mb-0">
-                    {popularmovie.original_title}
-                  </p>
-                  <span className="movie_caption">
-                    Rating: {popularmovie.vote_average}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        {loading && <h1 className="text-white">loading...</h1>}
+        {
+          !!nowPlayData && (
+            <Slider movies={nowPlayData} />
+          )
+        }
+          {
+            !!popularMovies && (
+              <MovieList title={'Popular Movies'} movies={popularMovies}  />
+            )
+          }
       </>
     );
 }

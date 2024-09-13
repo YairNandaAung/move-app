@@ -1,0 +1,34 @@
+.movie-detail-card {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 130px;
+}
+.img-radius{
+    border-radius: 10px;
+}
+.movie_type {
+    background-color: #392592;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+  
+.mv-button{
+    border: 1px solid white;
+    color: black;
+    padding: 10px 19px 10px 19px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.active-star{
+    color: rgb(241, 206, 5);
+}
+.bg-opacity{
+    background-color: #212529;
+    height: 600px;
+    width: 100%;
+    opacity: 0.6;
+}

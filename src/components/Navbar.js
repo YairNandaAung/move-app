@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './navbar.css'
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
       <div className="container ">
-        <a className="navbar-brand text-danger" href="#">
-          Navbar
-        </a>
+        <Link className="navbar-brand text-danger" to={'/'}>
+          Movie App
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -30,7 +31,12 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item me-3">
-              <Link to={"/about"} className="nav-link text-white">About</Link>
+              <Link 
+                to={"/about"} 
+                className="nav-link text-white"
+              >
+                About
+              </Link>
             </li>
             <li className="nav-item me-3">
               <a className="nav-link text-white" href="#">
