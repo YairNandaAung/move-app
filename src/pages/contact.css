@@ -1,0 +1,22 @@
+.contact-detail{
+    background-color:rgb(211, 223, 223);
+     padding: 18px; border-radius: 5px;
+}
+.contact-icons{
+    width: 45px;
+     color: rgb(236, 17, 17);
+}
+.contact-btn{
+    color: white;
+    background-color: rgb(236, 17, 17);
+}
+.contact-btn:hover{
+    background-color: black;
+    color: white;
+}
+.divider3 {
+    border: 1.5px solid red;
+    width: 14%;
+    margin-bottom: 47px;
+    margin-top: -42px;
+}

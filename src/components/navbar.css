@@ -1,3 +1,14 @@
-ul.navbar-nav{
-    margin-left: 320px;
+a.nav-link:hover{
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+}
+
+.search-form{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+}
+.search-btn{
+    border-radius: 0px;
 }

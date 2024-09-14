@@ -5,7 +5,7 @@ import './navbar.css'
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
-      <div className="container ">
+      <div className="container-fluid">
         <Link className="navbar-brand text-danger" to={'/'}>
           Movie App
         </Link>
@@ -21,8 +21,8 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
-            <li className="nav-item me-3">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
+            <li className="nav-item me-3 ">
               <Link
                 to={"/"}
                 className="nav-link text-white"
@@ -46,12 +46,12 @@ export default function Navbar() {
           </ul>
           <form className="d-flex" role="search">
             <input
-              className="form-control me-2"
+              className="form-control search-form"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-danger" type="submit">
+            <button className="btn btn-outline-danger search-btn" type="submit">
               Search
             </button>
           </form>

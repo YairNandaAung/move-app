@@ -57,3 +57,9 @@
     background-color: rgb(210, 203, 203);
     padding: 10px;
 }
+
+.movie-video{
+    width: 97%;
+    margin: 20px;
+    /* height: 300px; */
+}
