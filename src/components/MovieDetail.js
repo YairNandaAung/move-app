@@ -8,10 +8,12 @@ export default function MovieDetail() {
     let [movie, setMovie] = useState({});
     let [loading, setLoading] = useState(true);
     let [genres, setGenres] = useState([])
-    let [companies, setCompanies] = useState([])
+    let [casters, setCasters] = useState([])
+    let [companies, setCompanies] = useState([]);
 
     useEffect(() => {
         fetchMovieDetail();
+        fetchCaster();
     }, []);
 
     const options = {
@@ -38,7 +40,21 @@ export default function MovieDetail() {
               setLoading(false)
           }
     }
-    console.log(movie)
+    const fetchCaster = async() => {
+        try {
+              const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/casts?language=en-US`, options);
+              if (!response.ok) {
+                  throw new Error('Network response was not ok.');
+              }
+              const data = await response.json();
+              setCasters(data.cast)
+              setLoading(false)
+          } catch (error) {
+              console.log(error)
+              setLoading(false)
+          }
+    }
+    console.log(companies)
     let backgroundStyle = {
         backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
         height: "600px",
@@ -51,6 +67,7 @@ export default function MovieDetail() {
         <>
             {loading && <h1 className="text-white">loading...</h1>}
             {!!movie && (
+                <>
                     <section style={backgroundStyle}>
                         <div className="bg-opacity"></div>
                         <div className="container movie-detail-card">
@@ -77,6 +94,30 @@ export default function MovieDetail() {
                             </div>
                         </div>
                     </section>
+                    <div className='row'>
+                        <h5 className='m-3'>Production Companies</h5>
+                        <div className='conpanies m-3'>
+                            {
+                                companies.map(company => (
+                                    <img src={`https://image.tmdb.org/t/p/original/${company.logo_path}`} />
+                                ))
+                            }
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <h5 className='m-3'>Casts</h5>
+                       <div className='casters m-3'>
+                            {
+                                casters.map(cast => (
+                                    <div className='cast'>
+                                        <img src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} />
+                                        <p className='cast-name'>{cast.name}</p>
+                                    </div>
+                                ))
+                            }
+                       </div>
+                    </div>
+                   </> 
                 )
             }
         </>

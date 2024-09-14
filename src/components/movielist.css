@@ -1,11 +1,16 @@
-.movie_title{
+.movie-info {
+    background-color: #212529;
+}
+
+.movie-title{
     color: white;
     font-size: 16px;
-    margin-top: 10px;
     font-weight: bold;
     letter-spacing: 1.3px;
+    padding-top: 10px;
 }
-.movie_caption{
+
+.movie-caption{
     color: #e0e0e0;
     font-size: 13px;
 }

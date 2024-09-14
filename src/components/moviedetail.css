@@ -32,3 +32,28 @@
     width: 100%;
     opacity: 0.6;
 }
+
+.cast {
+    display: inline-block;
+}
+
+.cast-name {
+    text-align: center;
+    font-size: 14px;
+}
+
+.casters img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.conpanies img{
+     width: 140px;
+     height: 50px;
+    background-color: rgb(210, 203, 203);
+    padding: 10px;
+}

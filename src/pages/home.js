@@ -6,11 +6,15 @@ function Home() {
 
     let [nowPlayData, setNowPlayData] = useState([]);
     let [popularMovies, setPopularMovies] = useState([]);
+    let [topRatedMovies, setTopRatedMovies] = useState([]);
+    let [upComingMovies, setUpComingMovies] = useState([]);
     let [loading, setLoading] = useState(true)
 
     useEffect(() => {
       fetchNowPlayData();
       fetchPopularMovies();
+      fetchTopRatedMovies();
+      fetchUpComingMovies();
     }, []);
 
     const options = {
@@ -51,6 +55,37 @@ function Home() {
             setLoading(false)
         }
     }
+
+    const fetchTopRatedMovies = async() => {
+      try {
+            const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options);
+            if (!response.ok) {
+                throw new Error('Network response was not ok.');
+            }
+            const data = await response.json();
+            setTopRatedMovies(data.results)
+            setLoading(false)
+        } catch (error) {
+            console.log(error)
+            setLoading(false)
+        }
+    }
+
+    const fetchUpComingMovies = async() => {
+      try {
+            const response = await fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1', options);
+            if (!response.ok) {
+                throw new Error('Network response was not ok.');
+            }
+            const data = await response.json();
+            setUpComingMovies(data.results)
+            setLoading(false)
+        } catch (error) {
+            console.log(error)
+            setLoading(false)
+        }
+    }
+
     return (
       <>
         {loading && <h1 className="text-white">loading...</h1>}
@@ -59,11 +94,21 @@ function Home() {
             <Slider movies={nowPlayData} />
           )
         }
-          {
-            !!popularMovies && (
-              <MovieList title={'Popular Movies'} movies={popularMovies}  />
-            )
-          }
+        {
+          !!popularMovies && (
+            <MovieList title={'Popular Movies'} movies={popularMovies}  />
+          )
+        }
+        {
+          !!topRatedMovies && (
+            <MovieList title={'Top Rated Movies'} movies={topRatedMovies}  />
+          )
+        }
+        {
+          !!upComingMovies && (
+            <MovieList title={'Upcoming Movies'} movies={upComingMovies}  />
+          )
+        }
       </>
     );
 }
