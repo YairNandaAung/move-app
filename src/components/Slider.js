@@ -24,6 +24,7 @@ export default function Slider({movies}) {
                         src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
                         className="d-block w-100"
                     />
+                    <div className="slider-bg-opacity"></div>
                     <div className='slider-info'>
                         <h1>{movie.title}</h1>
                         <p className='release-date'>Release Date: {movie.release_date}</p>

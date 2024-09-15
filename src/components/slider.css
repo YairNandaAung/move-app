@@ -48,9 +48,27 @@
 .overview {
     font-size: 14px;
 }
-.divider{
-    width: 7%;
-    border: 2.2px solid red;
-    margin-top: -44px;
-    margin-bottom: 50px;
+
+.slider-bg-opacity{
+    background-color: #212529;
+    height: 810px;
+    width: 100%;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .swiper-slide {
+        height: 500px;
+    }
+
+    .slider-info {
+        width: 70%;
+    }
+
+    .info-btn {
+        width: 50%;
+    }
 }

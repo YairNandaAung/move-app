@@ -17,8 +17,21 @@ export default function MovieList({title, movies}) {
                         disableOnInteraction: false,
                     }}
                     modules={[Autoplay]}
-                    slidesPerView={5}
-                    spaceBetween={30}
+                    slidesPerView={1}
+                    breakpoints={{
+                        640: {
+                          slidesPerView: 2,
+                          spaceBetween: 30,
+                        },
+                        768: {
+                          slidesPerView: 4,
+                          spaceBetween: 30,
+                        },
+                        1024: {
+                          slidesPerView: 5,
+                          spaceBetween: 30,
+                        },
+                    }}
                     className="mySwiper"
                 >
                     {movies.map((movie) => (

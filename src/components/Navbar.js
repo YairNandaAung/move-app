@@ -6,8 +6,8 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand text-danger" to={'/'}>
-          Movie App
+        <Link className="navbar-brand" to={'/'}>
+          <span className="reel-view">Reel</span>View
         </Link>
         <button
           className="navbar-toggler"
@@ -51,9 +51,7 @@ export default function Navbar() {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-danger search-btn" type="submit">
-              Search
-            </button>
+          
           </form>
         </div>
       </div>

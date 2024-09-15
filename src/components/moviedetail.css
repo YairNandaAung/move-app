@@ -63,3 +63,31 @@
     margin: 20px;
     /* height: 300px; */
 }
+
+@media only screen and (max-width: 768px) {
+    .movie-detail-card {
+        left: 0;
+        top: 75px;
+    }
+
+    img.img-fluid.img-radius {
+        width: 40%;
+    }
+
+    .movie-detail-title {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .movie-vote, .movie-release-date, .movie-language {
+        font-size: 14px;
+    }
+
+    span.movie_type {
+        font-size: 12px;
+    }
+
+    .movie-overview {
+        font-size: 12px;
+    }
+}

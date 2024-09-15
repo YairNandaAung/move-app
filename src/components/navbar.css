@@ -4,6 +4,11 @@ a.nav-link:hover{
     border-radius: 8px;
 }
 
+.navbar-toggler {
+    background-color: whitesmoke;
+    padding: 3px 5px;
+}
+
 .search-form{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -11,4 +16,19 @@ a.nav-link:hover{
 }
 .search-btn{
     border-radius: 0px;
+}
+
+span.reel-view {
+    color: red;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+a.navbar-brand {
+    color: rgb(151, 140, 140);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 15px;
 }

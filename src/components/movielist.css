@@ -14,3 +14,27 @@
     color: #e0e0e0;
     font-size: 13px;
 }
+
+.divider{
+    width: 7%;
+    border: 2.2px solid red;
+    margin-top: -44px;
+    margin-bottom: 50px;
+}
+.review-icon{
+    width: 2.5%;
+}
+.review-info{
+    font-size: 14px;
+    font-weight: bold;
+}
+.review-date{
+    font-size: 12px;
+}
+.star-section {
+    margin-left: 20px;
+}
+svg.size-6.rating-star {
+    width: 1.3%;
+    margin-right: 5px;
+}
