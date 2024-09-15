@@ -11,11 +11,11 @@ export default function about() {
             <div className="divider2"></div>
           </div>
           <p className="my-2">
-            Welcome to [Movie App], your ultimate destination for discovering
+            Welcome to Reel View, your ultimate destination for discovering
             and streaming movies from around the world. We believe in the power
             of cinema to inspire, entertain, and connect people through
             unforgettable stories. Whether you’re into the latest blockbusters,
-            indie films, timeless classics, or documentaries, [Movie App] is
+            indie films, timeless classics, or documentaries, Reel View is
             designed to cater to your unique taste in movies.
           </p>
           <p className="my-4">
@@ -26,7 +26,7 @@ export default function about() {
             find your next favorite movie effortlessly.
           </p>
           <p className="my-4">
-            But we’re more than just a streaming service. At [App Name], we are
+            But we’re more than just a streaming service. At Reel View, we are
             passionate about building a community of movie lovers. We bring you
             insightful reviews, exclusive interviews, and behind-the-scenes
             content to deepen your connection with the films you love. Whether
@@ -38,11 +38,11 @@ export default function about() {
             We are committed to delivering high-quality streaming, a seamless
             user experience, and flexible subscription options that fit your
             needs. Our team of movie buffs and tech innovators works tirelessly
-            to ensure that [App Name] stays ahead of the curve in offering a
+            to ensure that Reel View stays ahead of the curve in offering a
             cinematic experience that feels personal and exciting.
           </p>
           <p className="my-4">
-            Thank you for choosing [App Name], where every movie is a new
+            Thank you for choosing Reel View, where every movie is a new
             adventure waiting to be explored. Download the app and start your
             movie journey today!
           </p>
